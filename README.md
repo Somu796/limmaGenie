@@ -1,4 +1,6 @@
-![Alt text](limmaGenieLogo.jpeg)
+<p align="center">
+  <img src="images/limmaGenieLogo.jpeg" alt="limmaGenie Logo" width="400"/>
+</p>
 
 # 🌟 limmaGenie
 

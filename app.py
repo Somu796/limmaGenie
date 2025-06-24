@@ -1,6 +1,5 @@
 import streamlit as st
-from answers_retrieval import get_response_llm
-from answers_retrieval import llm
+from backend.answers_retrieval import get_response_llm
 import logging
 from langchain.prompts import PromptTemplate
 
