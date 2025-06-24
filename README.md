@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/limmaGenie Logo_colour.png" alt="limmaGenie Logo" width="400"/>
+  <img src="images/limmaGenie Logo_colour.png" alt="limmaGenie Logo" width="300"/>
 </p>
 
 # 🌟 limmaGenie
