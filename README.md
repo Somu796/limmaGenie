@@ -1,6 +1,7 @@
 <p align="center">
   <img src="images/limmaGenie Logo_colour.png" alt="limmaGenie Logo" width="300"/>
 </p>
+<p align="center"><em>Try [limmaGenie](https://limma-bot-cravd3dyaqhkegf8.eastus-01.azurewebsites.net/)!</em></p>
 
 # 🌟 [limmaGenie](https://limma-bot-cravd3dyaqhkegf8.eastus-01.azurewebsites.net/)
 
