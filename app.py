@@ -1,9 +1,6 @@
-import stat
-import time
 import streamlit as st
-import random
 from answers_retrieval import get_response_llm
-from answers_retrieval import process_vector_search_results, chain, embeddings, CONFIG, llm
+from answers_retrieval import llm
 import logging
 from langchain.prompts import PromptTemplate
 
