@@ -1,0 +1,13 @@
+flask
+streamlit
+requests
+numpy
+pandas
+openpyxl
+openai
+langchain_openai
+tiktoken
+duckduckgo-search
+beautifulsoup4
+langchain_community
+pymongo
