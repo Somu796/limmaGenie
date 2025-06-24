@@ -1,5 +1,8 @@
 <p align="center">
   <img src="images/limmaGenie Logo_colour.png" alt="limmaGenie Logo" width="300"/>
+</p>
+
+<p align="center">
   <strong>🚀 Try <a href="https://limma-bot-cravd3dyaqhkegf8.eastus-01.azurewebsites.net/"> limmaGenie</a></strong>
 </p>
 
