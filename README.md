@@ -3,7 +3,7 @@
 </p>
 
 <p align="center">
-  <strong>🚀 Try <a href="https://limma-bot-cravd3dyaqhkegf8.eastus-01.azurewebsites.net/"> limmaGenie</a></strong>
+  <em>🚀 Try <a href="https://limma-bot-cravd3dyaqhkegf8.eastus-01.azurewebsites.net/"> limmaGenie</a></em>
 </p>
 
 # 🌟 [limmaGenie](https://limma-bot-cravd3dyaqhkegf8.eastus-01.azurewebsites.net/)
