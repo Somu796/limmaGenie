@@ -58,6 +58,7 @@ Built with **LLM-powered intelligence** and deployed as a lightweight app, it's 
 - **Frontend & UI**: [Streamlit](https://streamlit.io/)
 - **Backend Logic**: Python + Flask + LangChain
 - **LLM Integration**: OpenAI + LangChain + Prompt Engineering
+- **Knowledge Curation**: Unstructured + BeautifulSoup
 - **Search Integration**: DuckDuckGo + BeautifulSoup
 - **Database**: MongoDB (secure access required)
 
