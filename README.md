@@ -2,7 +2,7 @@
   <img src="images/limmaGenie Logo_colour.png" alt="limmaGenie Logo" width="300"/>
 </p>
 
-# 🌟 limmaGenie
+# 🌟 [limmaGenie](https://limma-bot-cravd3dyaqhkegf8.eastus-01.azurewebsites.net/)
 
 **Your AI-powered assistant for differential expression analysis using the [limma](https://bioconductor.org/packages/release/bioc/html/limma.html) package.**
 
