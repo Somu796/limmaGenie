@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="images/limmaGenieLogo.jpeg" alt="limmaGenie Logo" width="400"/>
+  <img src="images/limmaGenie Logo_colour.png" alt="limmaGenie Logo" width="400"/>
 </p>
 
 # 🌟 limmaGenie
@@ -32,8 +32,8 @@ Built with **LLM-powered intelligence** and deployed as a lightweight app, it's 
 2. **Create Virtual Environment:**
 
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # or venv\Scripts\activate on Windows
+   python -m venv .venv
+   source .venv/bin/activate  # or venv\Scripts\activate on Windows
    ```
 
 3. **Install Dependencies:**
@@ -61,11 +61,10 @@ Built with **LLM-powered intelligence** and deployed as a lightweight app, it's 
 
 ## 🔐 To Get DB Access
 
-To get access to the MongoDB database for full functionality, please email:
+To get access to the database for full functionality, please email:
 
 📧 **bkushagra100@gmail.com**
-
-Include your GitHub ID and reason for requesting access.
+📧 **sudiptakh037@gmail.com**
 
 ---
 
