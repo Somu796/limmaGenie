@@ -6,18 +6,17 @@
   <em>🚀 Try <a href="https://limma-bot-cravd3dyaqhkegf8.eastus-01.azurewebsites.net/"> limmaGenie</a></em>
 </p>
 
-# 🧞‍♀️ limmaGenie
+# 🧞‍♀️ live demo
 
 **Your AI-powered assistant for differential expression analysis using the [limma](https://bioconductor.org/packages/release/bioc/html/limma.html) package.**
 
-Try A live demo here:
-<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden;">
+Try it here here:
+<div style="position:relative; padding-bottom:56.25%; height:0; overflow:hidden; border:2px solid #333; border-radius:8px;">
   <iframe src="https://limma-bot-cravd3dyaqhkegf8.eastus-01.azurewebsites.net/" 
           frameborder="0" width="100%" height="100%" 
-          allowfullscreen style="position:absolute; top:0; left:0;"></iframe>
+          allowfullscreen style="position:absolute; top:0; left:0; border:2px solid #555; border-radius:8px;">
+  </iframe>
 </div>
-
----
 
 ## 📌 About Us
 
