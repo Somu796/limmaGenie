@@ -28,9 +28,14 @@ Try it here here:
 
 Built with **LLM-powered intelligence** and deployed as a lightweight app, it's designed to **democratize omics analysis**.
 
----
+## ⚙️ How it works
+<div style="width: 100%; margin: 0 auto; background-color: #f9f9f9;;">
+  <img src="images/limmaGenie_Workflow.svg" 
+       alt="Workflow" 
+       style="width: 100%; height: auto; display: block;">
+</div>
 
-## ⚙️ How to Install
+## 🛠️ How to Install
 
 1. **Clone the Repository:**
 
@@ -57,7 +62,6 @@ Built with **LLM-powered intelligence** and deployed as a lightweight app, it's 
    streamlit run app.py
    ```
 
----
 
 ## 🧠 What Tech Stack?
 
@@ -68,7 +72,6 @@ Built with **LLM-powered intelligence** and deployed as a lightweight app, it's 
 - **Search Integration**: DuckDuckGo + BeautifulSoup
 - **Database**: MongoDB (secure access required)
 
----
 
 ## 🔐 To Get DB Access
 
@@ -77,7 +80,6 @@ To get access to the database for full functionality, please email:
 📧 **bkushagra100@gmail.com**
 📧 **sudiptakh037@gmail.com**
 
----
 
 ## 📦 requirements.txt
 
@@ -87,7 +89,6 @@ Install required libraries using:
 pip install -r requirements.txt
 ```
 
----
 
 ## 📘 Citations & Learning Resources
 
@@ -97,7 +98,6 @@ Learn more about `limma` and associated tools here:
 - [Design Matrix Guide for Gene Expression](https://bioconductor.org/help/workflows/limmaWorkflows/)
 - [RNA-seq Analysis with limma, Glimma, and edgeR](https://f1000research.com/articles/5-1408)
 
----
 
 ## 👨‍🔬 Built By
 
@@ -106,7 +106,6 @@ Learn more about `limma` and associated tools here:
 
 We're committed to building smarter and simpler tools for the omics research community.
 
----
 
 ## 💬 Thanks for Visiting!
 

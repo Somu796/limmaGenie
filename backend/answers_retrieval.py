@@ -396,8 +396,8 @@ def get_response_llm(
         return ["An unexpected error occurred.", "error"]
 
 
-# Example usage (commented out)
-if __name__ == "__main__":
-    query = "Differential gene expression analysis on haplotype-resolved diploid assemblyedgeRDESeq2haplotypelimma" 
-    answers = get_response_llm(user_query=query)
-    print(answers)
+# # Example usage (commented out)
+# if __name__ == "__main__":
+#     query = "Differential gene expression analysis on haplotype-resolved diploid assemblyedgeRDESeq2haplotypelimma" 
+#     answers = get_response_llm(user_query=query)
+#     print(answers)
