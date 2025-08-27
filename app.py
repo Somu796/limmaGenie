@@ -3,71 +3,12 @@ from backend.answers_retrieval import get_response_llm
 import logging
 from langchain.prompts import PromptTemplate
 
-##############################################
-def generate_answer(query, context):
-    prompt = PromptTemplate(
-        input_variables=["query", "context"],
-        template='''
-Role:
-You are assistant specializing in Limma (Linear Models for Microarray/Omics Data) analysis with R.
-Core Instructions:
-Context Usage: Use provided context as supplementary information only—not as definitive source. Answer based on the user's specific question using your expertise. Don't infer beyond what's explicitly asked.
-Citations: When referencing context, use format [X] where X = document number. Use each citation once per key point. No separate references section.
-Code Requirements: If code is requested, provide detailed yet simple explanations with relevant citations.
-Response Framework:
-Answer in user's language
-Focus on the specific question asked
-Integrate context citations naturally
-Explain technical concepts clearly
-CONTEXT: {context}
-USER QUERY: {query}
-TASK: Provide a focused response addressing the user's query above.
-'''
-    )
-    # print("----------------------------------------")
-    # print(context)
-    # print("----------------------------------------")
-    return llm.invoke(prompt.format(query=query, context=context)).content.strip()
-
-##################################################################################
 # Configure logging
 logging.basicConfig(
     level=logging.INFO, 
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
-
-# Format web search context
-def build_context(results):
-    context = ""
-    # for i, res in enumerate(results):
-    #     if "error" in res:
-    #         continue
-    #     context += f"[{i+1}] Title: {res['title']}\nURL: {res['url']}\n"
-    #     if res.get("question"):
-    #         context += f"Question: {res['question'][0]}\n"
-    #     if res.get("answers"):
-    #         context += f"Answer: {res['answers'][0]}\n"
-    #     context += "\n"
-    # return context.strip()
-    context = ''
-    if results.get('content') and len(results['content']) > 0:
-        for i, item in enumerate(results['content']):
-            context += f"[{i+1}] {item}\n"
-    return context
-
-greetings = [
-    "Hi there! I am limmaGenie. How can I help you today?",
-    "Hello! limmaGenie here. How may I assist you today?",
-    "Hey! I'm limmaGenie. What can I do for you today?",
-    "Greetings! I'm limmaGenie. How can I assist you?",
-    "Hi! This is limmaGenie. How may I help you today?",
-    "Hello! I am limmaGenie, here to help. What do you need assistance with?",
-    "Hey there! limmaGenie at your service. How can I support you today?",
-    "Hi! limmaGenie here. Let me know how I can help!",
-    "Good day! I'm limmaGenie. How may I assist you today?",
-    "Hi there! This is limmaGenie speaking. How can I help?"
-]
 
 # Page config
 st.set_page_config(
@@ -316,121 +257,18 @@ if st.session_state.messages and st.session_state.messages[-1]["role"] == "user"
                 response = result_dict.get("response", "I apologize, but I encountered an error while processing your request. Please try again.")
                 if status not in ["successful", "warning", "no_context"]:
                     response = "I apologize, but I encountered an error while processing your request. Please try again."
-                
-
-
-
-                
-        #         answer = process_vector_search_results(
-        #             query=st.session_state.messages[-1]["content"], 
-        #             embeddings_func=embeddings,
-        #             config=CONFIG
-        #         )
             
-        #     with st.spinner("Evaluating context..."):
-        #         # Process successful search
-        #         # print(answer["status"])
-        #         # print(answer["content"])
-        #         # print(answer)
-
-        #         if answer.get("status") and answer["status"] in ["successful", "warning", "no_context"]:
-        #             input_json = {
-        #                 "user_input": st.session_state.messages[-1]["content"],
-        #                 "context": answer["content"]
-        #             }
-
-        #             ## Check if content relevant?
-        #             is_context_relevant = chain_check.invoke(input_json)
-        #         else:
-        #             response = "We are facing connection issues... \n Please try after some time."
-        # except Exception as e:
-        #     with st.spinner("Error during vector search: {e}"):
-        #         time.sleep(2)
-        #     logger.error(f"Error during vector search: {e}")
-        #     response = "I apologize, but I encountered an error while processing your request. Please try again."
-
-
-        # if is_context_relevant and is_context_relevant.content.lower() == "true":
-            
-        #     with st.spinner("limmaGenie generating response from existing database..."):
-        #         # Invoke LLM chain
-        #         llm_response = chain.invoke(input_json)
-                
-        #         # Combine response with references
-        #         response = f"{llm_response.content}\n\nReferences from database:\n{answer['urls']}"
-
-        # else:
-
-        #     with st.spinner("Searching web for relevant context..."):
-
-        #         user_query = st.session_state.messages[-1]["content"]
-        #         # Show spinner and generate response
-        #         try:
-        #             results = combined_search(user_query)
-        #             print(results)
-        #             if results and results.get('status') in ["successful", "warning", "no_context"]:
-        #                 context = build_context(results)
-        #                 if len(context)>0:
-        #                     final_answer = chain.invoke(input_json).content
-        #                     # final_answer = generate_answer(user_query, context)
-        #                 else:
-        #                     final_answer = llm.invoke(user_query).content.strip()
-                        
-        #                 # Build response with sources
-        #                 response = final_answer
-        #                 urls = results.get('urls', [])
-        #                 if len(urls)>0:
-        #                     response_source = f"\n\n**Sources (from web search):**\n"
-        #                     for i, url in enumerate(urls):
-        #                         response_source += f"\n[{i+1}]: {url}"
-        #                     # sources = [f"[{res['title']}]({res['url']})" for res in results if "error" not in res]
-        #                 if response_source:
-        #                     response += response_source
-        #             else:
-        #                 response = f"I apologize, but I encountered an error while processing your request during web search. Please try again."
-        #                 # response = "I couldn't find specific information for your query. Let me try to help based on my knowledge of LIMMA and Bioconductor."
-        #                 # response += "\n\n" + llm.invoke(user_query).content.strip()
                         
         except Exception as e:
             response = f"I apologize, but I encountered an error while processing your request during web search. Please try again.\n\nError: {str(e)}"
 
             
         stream =  [response]
-            
-        # except Exception as e:
-        #     logger.error(f"Unexpected error in get_response_llm: {e}")
-        #     stream = ["An unexpected error occurred.", "error"]
-        
         response_text = ""
         
         # Collect the full response
         for chunk in stream:
             response_text += chunk
-    
-    # elif mode == "web_search":
-    #     user_query = st.session_state.messages[-1]["content"]
-    #     # Show spinner and generate response
-    #     with st.spinner("limmaGenie is thinking..."):
-    #         try:
-    #             results = combined_search(user_query)
-    #             if results and isinstance(results, list):
-    #                 context = build_context(results)
-    #                 if context:
-    #                     final_answer = generate_answer(user_query, context)
-    #                 else:
-    #                     final_answer = llm.invoke(user_query).content.strip()
-                    
-    #                 # Build response with sources
-    #                 response_text = final_answer
-    #                 sources = [f"[{res['title']}]({res['url']})" for res in results if "error" not in res]
-    #                 if sources:
-    #                     response_text += f"\n\n**Sources:**\n" + "\n".join(sources)
-    #             else:
-    #                 response_text = "I couldn't find specific information for your query. Let me try to help based on my knowledge of LIMMA and Bioconductor."
-    #                 response_text += "\n\n" + llm.invoke(user_query).content.strip()
-                    
-    #         except Exception as e:
-    #             response_text = f"I apologize, but I encountered an error while processing your request. Please try again.\n\nError: {str(e)}"
     
     # Add assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": response_text})

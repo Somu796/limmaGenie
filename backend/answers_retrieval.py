@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 from pymongo import errors
-from backend.search import searchQuery
-from backend.imported_apis import llm, embeddings
+from search import searchQuery
+from imported_apis import llm, embeddings
 from dotenv import load_dotenv
 from langchain_core.prompts import ChatPromptTemplate
 from answer_reranker import calculate_cosine_similarity, filter_and_rank_results
@@ -396,8 +396,8 @@ def get_response_llm(
         return ["An unexpected error occurred.", "error"]
 
 
-# # Example usage (commented out)
-# if __name__ == "__main__":
-#     query = "Differential gene expression analysis on haplotype-resolved diploid assemblyedgeRDESeq2haplotypelimma" 
-#     answers = get_response_llm(user_query=query)
-#     print(answers)
+# Example usage (commented out)
+if __name__ == "__main__":
+    query = "Differential gene expression analysis on haplotype-resolved diploid assemblyedgeRDESeq2haplotypelimma" 
+    answers = get_response_llm(user_query=query)
+    print(answers)

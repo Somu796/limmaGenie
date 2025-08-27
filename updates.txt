@@ -1,0 +1,3 @@
+1. Run all the code check to runability,
+2. Check Streamlit frontend
+3. Add the flow chart how model works.
