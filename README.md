@@ -102,7 +102,7 @@ Learn more about `limma` and associated tools here:
 ## 👨‍🔬 Built By
 
 - **Sudipta Kumar Hazra** – MSc (Research) Student, UCC and Teagasc, Ireland
-- **Kushagra Bhatnagar** – Machine Learning Developer | Specializing in LLMs & NLP
+- **Kushagra Bhatnagar** – Machine Learning Scientist
 
 We're committed to building smarter and simpler tools for the omics research community.
 
